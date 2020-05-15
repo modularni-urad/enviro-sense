@@ -1,0 +1,30 @@
+{
+  "name": "modularni-urad-enviro-sense",
+  "description": "API for enviro data storage and quering",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node -r esm -r dotenv/config server.js",
+    "startdbg": "node -r esm -r dotenv/config --inspect-brk server.js"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Vaclav Klecanda <vencax77@gmail.com>"
+  },
+  "license": "BSD",
+  "engines": {
+    "node": ">=12.x",
+    "npm": ">=6.x"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.7.1",
+    "dotenv": "^4.0.0",
+    "esm": "^3.0.84",
+    "express": "^4.11.1",
+    "knex": "^0.19.5",
+    "knex-filter-loopback": "^0.3.0",
+    "pg": "^4.5.7",
+    "underscore": "^1.8.3"
+  },
+  "private": "false"
+}
