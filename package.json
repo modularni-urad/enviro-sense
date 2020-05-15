@@ -21,9 +21,9 @@
     "dotenv": "^4.0.0",
     "esm": "^3.0.84",
     "express": "^4.11.1",
-    "knex": "^0.19.5",
+    "knex": "^0.21.1",
     "knex-filter-loopback": "^0.3.0",
-    "pg": "^4.5.7",
+    "modularni-urad-utils": "https://github.com/modularni-urad/utils",
     "underscore": "^1.8.3"
   },
   "private": "false"

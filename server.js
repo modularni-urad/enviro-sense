@@ -1,17 +1,17 @@
 import express from 'express'
 import cors from 'cors'
+import path from 'path'
 import bodyParser from 'body-parser'
-
+import initDB from 'modularni-urad-utils/db'
+import initErrorHandlers from 'modularni-urad-utils/error_handlers'
 import InitApp from './index'
-import InitErrorHandlers from './error_handlers'
-import initDB from './db'
 
 async function init (host, port) {
-  const knex = await initDB()
+  const knex = await initDB(path.join(__dirname, 'migrations'))
   const app = express()
   app.use(cors())
   InitApp(app, bodyParser.json(), knex)
-  InitErrorHandlers(app) // ERROR HANDLING
+  initErrorHandlers(app) // ERROR HANDLING
 
   app.listen(port, host, (err) => {
     if (err) { throw err }
