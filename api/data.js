@@ -24,7 +24,7 @@ export function find (cond, knex) {
 
 export async function create (body, knex) {
   const devid = await getDevID(body.app_id, body.dev_id, knex)
-  const data = _.map(body.payloadFields, (v, k) => {
+  const data = _.map(body.payload_fields, (v, k) => {
     return { typ: k, value: v, devid, time: body.time }
   })
   return knex('envirodata').insert(data)
